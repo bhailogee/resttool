@@ -13,8 +13,42 @@
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/MDBootstrap/css/mdb.min.css">
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/tether/dist/js/tether.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+
+
 </head>
 <body>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-default">Default</button>
+
+<!-- Secondary, outline button -->
+<button type="button" class="btn btn-secondary">Secondary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+<div ng-include="'modules/menu/menu.html'"></div>
+
   <ul class="menu">
     <li><a href="#!/view1">view1</a></li>
     <li><a href="#!/view2">view2</a></li>
@@ -39,5 +73,8 @@
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+
+  <script src="bower_components/MDBootstrap/js/mdb.min.js"></script>
+
 </body>
 </html>
