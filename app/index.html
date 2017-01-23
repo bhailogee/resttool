@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="en" ng-app="rt" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="rt" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="rt" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="rt" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>My AngularJS App</title>
   <meta name="description" content="">
@@ -19,7 +20,9 @@
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/tether/dist/js/tether.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
+  <link rel="stylesheet" href="/bower_components/material-design-lite/material.min.css">
+  <script src="/bower_components/material-design-lite/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
 
@@ -27,52 +30,138 @@
 </head>
 <body>
 
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-primary">Primary</button>
 
-<!-- Indicates a dangerous or potentially negative action -->
-<button type="button" class="btn btn-default">Default</button>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page-header">
+        <h1>
+          LayoutIt! <small>Interface Builder for Bootstrap</small>
+        </h1>
+      </div>
+      <div class="jumbotron well">
+        <h2>
+          Hello, world!
+        </h2>
+        <p>
+          This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+        </p>
+        <p>
+          <a class="btn btn-primary btn-large" href="#">Learn more</a>
+        </p>
+      </div>
 
-<!-- Secondary, outline button -->
-<button type="button" class="btn btn-secondary">Secondary</button>
 
-<!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-success">Success</button>
+    </div>
+  </div>
 
-<!-- Contextual button for informational alert messages -->
-<button type="button" class="btn btn-info">Info</button>
+  <div class="row">
+    <div class="col-md-3">
 
-<!-- Indicates caution should be taken with this action -->
-<button type="button" class="btn btn-warning">Warning</button>
 
-<!-- Indicates a dangerous or potentially negative action -->
-<button type="button" class="btn btn-danger">Danger</button>
-<div ng-include="'modules/menu/menu.html'"></div>
 
-  <ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
-  </ul>
+    </div>
+    <div class="col-md-9">
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+        <form role="form">
+          <div class="form-group">
 
-  <div ng-view></div>
+            <label for="name">
+              REST API Name
+            </label>
+            <input type="text" class="form-control" placeholder="API Name e.g. carapi"  title="alpha numeric api name" id="name">
+            <p class="help-block">
+              This will be used in rest api url
+            </p>
+          </div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+         <!-- <div class="form-group">
 
+            <label for="exampleInputFile">
+              File input
+            </label>
+            <input type="file" id="exampleInputFile">
+            <p class="help-block">
+              Example block-level help text here.
+            </p>
+          </div>-->
+         <!-- <div class="checkbox">
+
+            <label>
+              <input type="checkbox"> Check me out
+            </label>
+          </div>-->
+          <button type="submit" class="btn btn-default">
+            Submit
+          </button>
+
+        </form>
+
+  </div>
+
+
+
+
+  </div>
+
+
+<!--<div class="container-fluid">
+
+  <div class="mdl-layout mdl-js-layout">
+
+
+
+    &lt;!&ndash; Provides extra visual weight and identifies the primary action in a set of buttons &ndash;&gt;
+    <button type="button" class="btn btn-primary">Primary</button>
+
+    &lt;!&ndash; Indicates a dangerous or potentially negative action &ndash;&gt;
+    <button type="button" class="btn btn-default">Default</button>
+
+    &lt;!&ndash; Secondary, outline button &ndash;&gt;
+    <button type="button" class="btn btn-secondary">Secondary</button>
+
+    &lt;!&ndash; Indicates a successful or positive action &ndash;&gt;
+    <button type="button" class="btn btn-success">Success</button>
+
+    &lt;!&ndash; Contextual button for informational alert messages &ndash;&gt;
+    <button type="button" class="btn btn-info">Info</button>
+
+    &lt;!&ndash; Indicates caution should be taken with this action &ndash;&gt;
+    <button type="button" class="btn btn-warning">Warning</button>
+
+    &lt;!&ndash; Indicates a dangerous or potentially negative action &ndash;&gt;
+    <button type="button" class="btn btn-danger">Dangeteer</button>
+
+
+
+
+    <ul class="menu">
+      <li><a href="#!/view1">view1</a></li>
+      <li><a href="#!/view2">view2</a></li>
+    </ul>
+
+    &lt;!&ndash;[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]&ndash;&gt;
+
+
+
+    <div>Angular seed app: v<span app-version></span></div>
+
+  </div>
+
+</div>-->
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-  <script src="bower_components/angular/angular.js"></script>
+<!--  <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>-->
 
   <script src="bower_components/MDBootstrap/js/mdb.min.js"></script>
 
